@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+  --dark-cyan:hsl(158, 36%, 37%);
+  --cream:hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --font1:"Montserrat", serif;
+  --font2:"Fraunces", serif;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: var(--cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  background-color: white;
+  width: 600px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+}
+
+@media(max-width:600px){
+  .card{
+    max-width: 90%;
+    height: 700px;
+  }
+}
+
+.img{
+  width: 50%;
+  height: 100%;
+  
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+@media(max-width:600px){
+  .img{
+    width: 100%;
+    height: 35%;
+    margin-bottom: 0px;
+  }
+  img{
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    margin-bottom: 0;
+  }
+}
+
+.content{
+  width: 50%;
+  height: 100%;
+  padding: 30px;
+}
+h3{
+  font-family: var(--font1);
+  font-size: 12px;
+  color: var(--Dark-grayish-blue);
+  letter-spacing: 8px;
+}
+h1{
+  font-family: var(--font2);
+  line-height: 38px;
+  font-size: 36px;
+}
+p{
+  color: var(--Dark-grayish-blue);
+  font-family: var(--font1);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.price{
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+.new{
+  font-family: var(--font2);
+  font-size: 38px;
+  margin-right: 15px;
+  font-weight: bold;
+  color: var(--dark-cyan);
+}
+
+.old{
+  font-family: var(--font1);
+  color: var(--Dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+button{
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background-color: var(--dark-cyan);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+button:hover{
+  background-color: var(--very-dark-blue);
+}
+
+i{
+  margin-right: 10px;
+}
+
+
+@media(max-width:600px){
+  .content{
+    margin-top: 0;
+    width: 100%;
+    height: 60%;
+    padding-top: 0;
+  }
+  h3{
+    margin-top: 0;
+  }
+}
